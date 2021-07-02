@@ -1,0 +1,22 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  name:
+    label: Nom du plat/article
+    span: left
+  description:
+    label: Description
+    span: right
+  ingredients:
+    label: Ingrédients
+    span: left
+  prix:
+    label: Prix
+    span: right
+  parent:
+    label: Catégorie
+    type: relation
+    nameFrom: name
+

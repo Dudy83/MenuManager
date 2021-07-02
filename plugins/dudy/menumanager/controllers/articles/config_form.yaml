@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Article
+
+# Model Form Field configuration
+form: $/dudy/menumanager/models/article/fields.yaml
+
+# Model Class name
+modelClass: Dudy\MenuManager\Models\Article
+
+# Default redirect location
+defaultRedirect: dudy/menumanager/articles
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: dudy/menumanager/articles/update/:id
+    redirectClose: dudy/menumanager/articles
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: dudy/menumanager/articles
+    redirectClose: dudy/menumanager/articles
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

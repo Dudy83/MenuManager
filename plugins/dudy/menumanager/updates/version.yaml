@@ -1,0 +1,6 @@
+1.0.1: 
+  - create_categories_table.php
+  - First version of MenuManager
+1.0.2: 
+  - create_articles_table.php
+  - Add 2nd model
