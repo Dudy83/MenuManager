@@ -9,7 +9,7 @@ list: $/dudy/menumanager/models/category/columns.yaml
 modelClass: Dudy\MenuManager\Models\Category
 
 # List Title
-title: Manage Categories
+title: Edition Catégories
 
 # Link URL for each record
 recordUrl: dudy/menumanager/categories/update/:id
@@ -48,3 +48,7 @@ toolbar:
     # Search widget configuration
     search:
         prompt: backend::lang.list.search_prompt
+
+showTree: true
+
+treeExpended: true

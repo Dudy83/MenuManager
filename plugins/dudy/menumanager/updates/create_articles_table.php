@@ -16,7 +16,7 @@ class CreateArticlesTable extends Migration
             $table->string('description');
             $table->string('ingredients');
             $table->integer('prix');
-            $table->integer('parent_id');
+            $table->integer('category_id');
         });
     }
 

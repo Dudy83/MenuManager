@@ -13,6 +13,7 @@ class CreateCategoriesTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('name');
+            $table->integer('sort_order')->default(null);
         });
     }
 

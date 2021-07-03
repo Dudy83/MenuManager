@@ -3,6 +3,11 @@
 # ===================================
 
 columns:
-    id:
-        label: ID
-        searchable: true
+    name:
+      label: Nom de l'article
+      searchable: true
+    description:
+      label: Description
+    prix:
+      label: Prix
+    

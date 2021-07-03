@@ -9,6 +9,7 @@ class Category extends Model
 {
     use \Winter\Storm\Database\Traits\Validation;
     use \Winter\Storm\Database\Traits\SimpleTree;
+    use \October\Rain\Database\Traits\Sortable;
 
     /**
      * @var string The database table used by the model.
@@ -65,7 +66,7 @@ class Category extends Model
      */
     public $hasOne = [];
     public $hasMany = [
-        'children' => ['Article', 'key' => 'parent_id']
+        'articles' => [Articles::class, 'key' => 'parent_id']
     ];
     public $hasOneThrough = [];
     public $hasManyThrough = [];
@@ -76,4 +77,12 @@ class Category extends Model
     public $morphMany = [];
     public $attachOne = [];
     public $attachMany = [];
+
+    public function beforeValidate()
+    {
+        if (empty($this->sort_order))
+        {
+            $this->sort_order = static::max('sort_order') + 1;
+        }
+    }
 }

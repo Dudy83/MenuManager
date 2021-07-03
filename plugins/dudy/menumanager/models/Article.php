@@ -8,7 +8,6 @@ use Model;
 class Article extends Model
 {
     use \Winter\Storm\Database\Traits\Validation;
-    use \Winter\Storm\Database\Traits\SimpleTree;
 
     /**
      * @var string The database table used by the model.
@@ -30,7 +29,8 @@ class Article extends Model
      */
     public $rules = [
         'name' => 'required|min:4',
-        'prix' => 'required|integer'
+        'prix' => 'required|integer',
+        'category_id' => 'required'
     ];
 
     /**
@@ -69,7 +69,7 @@ class Article extends Model
     public $hasOneThrough = [];
     public $hasManyThrough = [];
     public $belongsTo = [
-        'parent'    => ['Category', 'key' => 'parent_id'],
+        'category' => [Category::class, 'key' => 'category_id'],
     ];
     public $belongsToMany = [];
     public $morphTo = [];

@@ -84,7 +84,7 @@ class Plugin extends PluginBase
         return [
             'menumanager' => [
                 'label'       => 'Menu Manager',
-                'url'         => Backend::url('dudy/menumanager/categories'),
+                'url'         => Backend::url('dudy/menumanager/categories/reorder'),
                 'icon'        => 'icon-pencil-square-o',
                 'permissions' => ['dudy.menumanager.*'],
                 'order'       => 500,

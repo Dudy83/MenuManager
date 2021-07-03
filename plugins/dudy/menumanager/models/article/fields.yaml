@@ -15,7 +15,7 @@ fields:
   prix:
     label: Prix
     span: right
-  parent:
+  category:
     label: Catégorie
     type: relation
     nameFrom: name
